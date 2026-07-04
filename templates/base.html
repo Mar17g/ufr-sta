@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFR STA, UAM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbarsecondaire">
+        <a href="https://www.uam.sn" class="logo-uam" title="Université Amadou Mahatr MBOW" ><img src="../static/images/logouam.png" alt="logo UAM de dakar" ><span>UAM</span></a>
+        <div class="navbar-secondaire">
+            <ul>
+                <li><a href="{{url_for('actualites')}}" class="{% if request.endpoint == 'actualites' %}active{% endif %}">Actualités</a></li>
+                <li><a href="{{url_for('galerie')}}" class="{% if request.endpoint == 'galerie' %}active{% endif %}">Galerie</a></li>
+                <li><a href="{{url_for('nosenseignants')}}" class="{% if request.endpoint == 'nosenseignants' %}active{% endif %}">Enseignants</a></li>
+                <li><a href="{{url_for('contact')}}" class="{% if request.endpoint == 'contact' %}active{% endif %}">Contacts</a></li>
+                <li><a href="{{url_for('departements')}}" class="{% if request.endpoint == 'departements' %}active{% endif %}">Aministration</a></li>
+            </ul>
+        </div>
+        <img src="{{url_for('static', filename='images/menu-btn.png')}}" alt="menu hamburger" class="menu-hamburger">
+    </nav>
+
+    <nav class="navbarprincipal">
+        <a href="#" class="logo-sta" title="UFR STA" ><img src="../static/images/logouam.png" alt="logo STA UAM"><span>UFR<br>STA</span></a>
+        <div class="navbar-principal" >
+            <ul>
+                <li><a href="{{url_for('index')}}" class="{% if request.endpoint == 'index' %}active{% endif %}">Notre UFR</a></li>
+                <li><a href="{{url_for('departements')}}" class="{% if request.endpoint == 'departements' %}active{% endif %}">Départements</a></li>
+                <li><a href="{{url_for('formations')}}" class="{% if request.endpoint == 'formations' %}active{% endif %}">Formations</a></li>
+                <li><a href="{{url_for('activites')}}" class="{% if request.endpoint == 'activites' %}active{% endif %}">Activités</a></li>
+                <li><a href="{{url_for('espaceetudiant')}}" class="{% if request.endpoint == 'espaceetudiant' %}active{% endif %}">Espace étudiant</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+
+    </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
