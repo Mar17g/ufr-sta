@@ -1,3 +1,4 @@
+/*couleurs de l'uam bleu:#00A7E1 et marron:#993921 */
 *{
     margin: 0;
     padding: 0;
@@ -6,8 +7,7 @@
 }
 
 body{
-    font-family: 'Poppins';
-    background: #00A3E0;
+    font-family:  'Georgia', 'serif' ;
 }
 
 
@@ -17,117 +17,60 @@ header{
     background-size: cover;
 }
 
+/*Navigation secondaire pour mobile*/
 .navbarsecondaire{
-    padding: 10px 30px 10px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+    padding: 8px 12px 8px 12px;
+    background: #00A7E1 ; 
 }
-
-.navbarsecondaire a{
-    color: black;
-}
-
-.navbarsecondaire a:hover{
-    text-decoration: underline;
-}
-
 .navbarsecondaire .logo-uam{
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     font-weight: bold;
     font-size: 25px;
+    color: white;
 }
-
+.navbarsecondaire .logo-uam:hover{
+    text-decoration:underline;
+}
 .navbarsecondaire .logo-uam img{
-    height: 30px;
+    height: 20px;
 }
-
-.navbarsecondaire .navbar-secondaire ul{
-    display: flex;
-    font-size: 15px;
-}
-
-.navbarsecondaire .menu-hamburger{
+.navbarsecondaire .navbar-secondaire{
     display: none;
-    width: 20px;
+}
+.navbarsecondaire .search-btn{
+    position: absolute;
+    top: 12px;
+    right: 8px;
+    height: 20px;
 }
 
-.navbarsecondaire .navbar-secondaire ul li{
-    margin: 0 15px;
-}
-
-
-
+/*Navigation principale pour mobile*/
 .navbarprincipal{
-    padding: 10px 30px 10px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 90%;
-    box-sizing: border-box;
+    padding: 8px 12px 8px 12px;
 }
-
-.navbarprincipal a{
-    color: black;
-}
-
 .navbarprincipal .logo-sta:hover{
     text-decoration: underline;
 }
-
 .navbarprincipal .logo-sta{
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 5px;
     font-weight: bold;
-    font-size: 25px;
+    font-size: 35px;
+    color: black;
 }
-
 .navbarprincipal .logo-sta img{
-    height: 50px;
+    height: 25px;
 }
-
-.navbarprincipal .navbar-principal ul {
-    display: flex;
-    font-size: 25px;
+.navbarprincipal .navbar-principal{
+    display: none;
 }
-
-.navbarprincipal .navbar-principal ul li{
-    margin: 0 20px;
-}
-
-.navbarprincipal .navbar-principal ul li a{
-    position: relative;
-}
-
-.navbarprincipal .navbar-principal ul li a::after{
-    content: "";
+.navbarprincipal .menu-hamburger{
     position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 4px;
-    background: #993921; /*Couleur de l'uam */
-    transition: width 0.4s ease;
+    top: 56px;
+    right: 8px;
+    height: 35px;
 }
 
-.navbarprincipal .navbar-principal ul li a:hover::after{
-    width: 100%;
-}
-
-.navbarprincipal .navbar-principal ul li a.active::after{
-    width: 100%;
-    background: #00A3E0; /*Couleur de l'uam */
-} 
-
-
-
-@media screen and (max-width: 768px) {
-    .navbar-secondaire, .navbar-principal{
-        display: none;
-    }    
-}

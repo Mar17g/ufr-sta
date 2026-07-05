@@ -8,7 +8,7 @@
 </head>
 <body>
     <nav class="navbarsecondaire">
-        <a href="https://www.uam.sn" class="logo-uam" title="Université Amadou Mahatr MBOW" ><img src="../static/images/logouam.png" alt="logo UAM de dakar" ><span>UAM</span></a>
+        <a href="https://www.uam.sn" class="logo-uam" title="Université Amadou Mahtar MBOW" ><img src="../static/images/logouam.png" alt="logo UAM de dakar" ><span>UAM</span></a>
         <div class="navbar-secondaire">
             <ul>
                 <li><a href="{{url_for('actualites')}}" class="{% if request.endpoint == 'actualites' %}active{% endif %}">Actualités</a></li>
@@ -18,11 +18,11 @@
                 <li><a href="{{url_for('departements')}}" class="{% if request.endpoint == 'departements' %}active{% endif %}">Aministration</a></li>
             </ul>
         </div>
-        <img src="{{url_for('static', filename='images/menu-btn.png')}}" alt="menu hamburger" class="menu-hamburger">
+        <img src="{{url_for('static', filename='images/search-btn.svg')}}" alt="bouton de recherche" class="search-btn">
     </nav>
 
     <nav class="navbarprincipal">
-        <a href="#" class="logo-sta" title="UFR STA" ><img src="../static/images/logouam.png" alt="logo STA UAM"><span>UFR<br>STA</span></a>
+        <a href="#" class="logo-sta" title="UFR STA" ><img src="../static/images/logouam.png" alt="logo STA UAM"><span>UFR STA</span></a>
         <div class="navbar-principal" >
             <ul>
                 <li><a href="{{url_for('index')}}" class="{% if request.endpoint == 'index' %}active{% endif %}">Notre UFR</a></li>
@@ -32,6 +32,7 @@
                 <li><a href="{{url_for('espaceetudiant')}}" class="{% if request.endpoint == 'espaceetudiant' %}active{% endif %}">Espace étudiant</a></li>
             </ul>
         </div>
+        <img src="{{url_for('static', filename='images/menu-btn.svg')}}" alt="menu hamburger" class="menu-hamburger" >
     </nav>
 
     <header>
