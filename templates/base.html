@@ -21,9 +21,9 @@
         <img src="{{url_for('static', filename='images/search-btn.svg')}}" alt="bouton de recherche" class="search-btn">
     </nav>
 
-    <nav class="navbarprincipal">
-        <a href="#" class="logo-sta" title="UFR STA" ><img src="../static/images/logouam.png" alt="logo STA UAM"><span>UFR STA</span></a>
-        <div class="navbar-principal" >
+    <nav class="navbarprincipale">
+        <a href="{{url_for('index')}}" class="logo-sta" title="UFR STA" ><img src="../static/images/logouam.png" alt="logo STA UAM"><span>UFR STA</span></a>
+        <div class="navbar-principale" >
             <ul>
                 <li><a href="{{url_for('index')}}" class="{% if request.endpoint == 'index' %}active{% endif %}">Notre UFR</a></li>
                 <li><a href="{{url_for('departements')}}" class="{% if request.endpoint == 'departements' %}active{% endif %}">Départements</a></li>
@@ -41,4 +41,15 @@
     {% block content %}
     {% endblock %}
 </body>
+
+<!--JavaScript pour le bouton menu mobile -->
+<script>
+    const menuhamburger = document.querySelector('.menu-hamburger')
+    const navsec = document.querySelector('.navbar-secondaire')
+    const navprin = document.querySelector('.navbar-principale')
+    menuhamburger.addEventListener('click',()=>{
+        navprin.classList.toggle('mobile-menu')
+        navsec.classList.toggle('mobile-menu')
+    })
+</script>
 </html>

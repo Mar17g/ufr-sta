@@ -10,13 +10,7 @@ body{
     font-family:  'Georgia', 'serif' ;
 }
 
-
-header{
-    height: 100vh;
-    width: 100vw;
-    background-size: cover;
-}
-
+/*Mobile first*/
 /*Navigation secondaire pour mobile*/
 .navbarsecondaire{
     padding: 8px 12px 8px 12px;
@@ -37,23 +31,46 @@ header{
     height: 20px;
 }
 .navbarsecondaire .navbar-secondaire{
-    display: none;
+    position: fixed;
+    top: calc(150px + (5 * 66px));
+    left: 0;
+    width: 100%;
+    background-color:transparent;
+    margin-left: -100%;
+    transition: 0.5s;
+    z-index: 1001;
+}
+.navbarsecondaire .navbar-secondaire ul{
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+}
+.navbarsecondaire .navbar-secondaire ul li{
+    margin: 0px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.navbarsecondaire .navbar-secondaire a{
+    color: white;
 }
 .navbarsecondaire .search-btn{
     position: absolute;
     top: 12px;
     right: 8px;
-    height: 20px;
+    height: 25px;
+    z-index: 2001;
 }
 
+
 /*Navigation principale pour mobile*/
-.navbarprincipal{
+.navbarprincipale{
     padding: 8px 12px 8px 12px;
 }
-.navbarprincipal .logo-sta:hover{
+.navbarprincipale .logo-sta:hover{
     text-decoration: underline;
 }
-.navbarprincipal .logo-sta{
+.navbarprincipale .logo-sta{
     display: inline-flex;
     align-items: center;
     gap: 5px;
@@ -61,16 +78,167 @@ header{
     font-size: 35px;
     color: black;
 }
-.navbarprincipal .logo-sta img{
+.navbarprincipale .logo-sta img{
     height: 25px;
 }
-.navbarprincipal .navbar-principal{
-    display: none;
+.navbarprincipale .navbar-principale{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #00A7E1;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 150px;
+    margin-left: -100%;
+    transition: 0.5s;
+    z-index: 1000;
 }
-.navbarprincipal .menu-hamburger{
+.navbarprincipale .navbar-principale ul{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.navbarprincipale .navbar-principale ul li{
+    margin: 0;
+    padding: 18px 30px;
+    font-size: 30px;
+    font-weight: 600;
+}
+.navbarprincipale .navbar-principale ul li a{
+    color: white;
+    position: relative;
+}
+.navbarprincipale .navbar-principale ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background: #993921;
+    transition: width 0.4s ease;
+}
+.navbarprincipale .navbar-principale ul li a:hover::after{
+    width: 100%;
+}
+.navbarprincipale .menu-hamburger{
     position: absolute;
     top: 56px;
     right: 8px;
     height: 35px;
+    z-index: 2000;
+}
+
+.navbar-secondaire.mobile-menu, .navbar-principale.mobile-menu{
+    margin-left: 0;
+}
+
+/*Desktop*/
+@media screen and (min-width: 1024px) {
+
+    /*Navigation secondaire pour desktop*/
+    .navbarsecondaire{
+        padding: 10px 20px 10px 20px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+        background: #00A7E1 ; 
+    }
+    .navbarsecondaire a{
+        color: white;
+    }
+    .navbarsecondaire a:hover{
+        text-decoration: underline;
+    }
+    .navbarsecondaire .logo-uam{
+        gap: 8px;
+        font-size: 30px;
+    }
+    .navbarsecondaire .logo-uam img{
+        height: 25px;
+    }
+    .navbarsecondaire .navbar-secondaire{
+        position: static;
+        margin-left: 0;
+        width: auto;
+        display: flex;
+    }
+    .navbarsecondaire .navbar-secondaire ul{
+        flex-direction: row;
+        padding-top: 0;
+    }
+    .navbarsecondaire .navbar-secondaire ul li{
+        margin: 0 12px;
+        padding: 10px 0;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    .navbarsecondaire .search-btn{
+        top: 20px;
+        height: 20px;
+    }
+    
+    /*Navigation principale pour desktop*/
+    .navbarprincipale{
+        padding: 10px 30px 10px 30px;
+        display: flex;
+        align-items: center;
+         gap: 50px;
+        width: 90%;
+        box-sizing: border-box;
+    }
+    .navbarprincipale a{
+        color: black;
+    }
+    .navbarprincipale .logo-sta{
+        gap: 8px;
+        font-size: 25px;
+        flex-shrink: 0;
+        white-space: nowrap;
+    }
+    .navbarprincipale .logo-sta img{
+        height: 22px;
+    }
+    .navbarprincipale .navbar-principale{
+        position: static;
+        margin-left: 0;
+        width: auto;
+        height: auto;
+        background: transparent;
+        align-items: center;
+        padding-top: 0;
+        display: flex;
+    }
+    .navbarprincipale .navbar-principale ul{
+        flex-direction: row;
+        width: auto;
+    }
+    .navbarprincipale .navbar-principale ul li{
+        margin: 0 14px;
+        padding: 10px 0;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    .navbarprincipale .navbar-principale ul li{
+        margin: 0 20px;
+    }
+    .navbarprincipale .navbar-principale ul li a{
+        color: black;
+    }
+    .navbarprincipale .navbar-principale ul li a::after{
+        bottom: -4px;
+        height: 4px;
+    }
+    .navbarprincipale .navbar-principale ul li a.active::after{
+        width: 100%;
+        background: #00A3E0; 
+    } 
+    .navbarprincipale .menu-hamburger{
+        display: none;
+    }
 }
 
