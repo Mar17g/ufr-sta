@@ -242,3 +242,314 @@ body{
     }
 }
 
+/*DASHBOARD ADMIN */
+.dashboard{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.dashboard h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#00A7E1;
+}
+
+.dashboard ul{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.dashboard li{
+    list-style:none;
+}
+
+.dashboard a{
+    display:block;
+    background:#00A7E1;
+    color:white;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.dashboard a:hover{
+    background:#993921;
+}
+
+/* Gerer Info ufr */
+
+.admin-page{
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    padding:25px;
+
+}
+
+.admin-page h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#00A7E1;
+
+}
+
+.admin-page label{
+
+    display:block;
+
+    margin-top:20px;
+
+    font-weight:bold;
+
+}
+
+.admin-page input,
+
+.admin-page textarea{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:8px;
+
+    border:1px solid #ccc;
+
+    border-radius:5px;
+
+    box-sizing:border-box;
+
+}
+
+.admin-page textarea{
+
+    resize:vertical;
+
+}
+
+.admin-page button{
+
+    margin-top:25px;
+
+    background:#00A7E1;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+}
+
+.admin-page button:hover{
+
+    background:#993921;
+
+}
+
+/* ACCUEIL index*/
+
+.hero{
+
+    background:#00A7E1;
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+.hero h1{
+
+    font-size:45px;
+
+}
+
+.hero h3{
+
+    margin-top:10px;
+
+    font-weight:normal;
+
+}
+
+.presentation{
+
+    max-width:1100px;
+
+    margin:50px auto;
+
+    padding:0 20px;
+
+}
+
+.presentation h2{
+
+    color:#00A7E1;
+
+    margin:30px 0 10px;
+
+}
+
+.presentation p{
+
+    text-align:justify;
+
+    line-height:1.8;
+
+}
+
+/* ACTUALITES */
+
+.admin-page{
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.admin-page h1,
+.admin-page h2{
+    text-align: center;
+    color: #00A7E1;
+    margin-bottom: 20px;
+}
+
+.admin-page label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.admin-page input,
+.admin-page textarea,
+.admin-page select{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.admin-page textarea{
+    resize: vertical;
+}
+
+.admin-page button{
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #00A7E1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.admin-page button:hover{
+    background: #993921;
+}
+
+.admin-page hr{
+    margin: 40px 0;
+}
+
+.admin-page table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-page th{
+    background: #00A7E1;
+    color: white;
+    padding: 12px;
+}
+
+.admin-page td{
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.admin-page tr:nth-child(even){
+    background: #f8f8f8;
+}
+
+.admin-page img{
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.titre-page{
+    text-align: center;
+    margin: 40px 0;
+    color: #00A7E1;
+}
+
+.actualites{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.actualite{
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0,0,0,.15);
+    transition: .3s;
+}
+
+.actualite:hover{
+    transform: translateY(-5px);
+}
+
+.actualite img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.actualite .contenu{
+    padding: 20px;
+}
+
+.actualite h2{
+    color: #00A7E1;
+    margin-bottom: 10px;
+}
+
+.actualite .date{
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.actualite p{
+    text-align: justify;
+    line-height: 1.6;
+}

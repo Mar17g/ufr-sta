@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="admin-page">
+
+<h1>A propos de l'Unité de Formation et de Recherche(UFR)</h1>
+
+<form method="POST">
+
+<label>Nom de l'UFR</label>
+<input type="text" name="nom" value="{{ufr.NOM_UFR}}">
+
+<label>Sigle</label>
+<input type="text" name="sigle" value="{{ufr.SIGLE_UFR}}">
+
+<label>Téléphone</label>
+<input type="text" name="telephone" value="{{ufr.TELEPHONE_UFR}}">
+
+<label>Email</label>
+<input type="email" name="email" value="{{ufr.EMAIL_UFR}}">
+
+<label>Mot du Directeur</label>
+<textarea name="mot" rows="10">{{ufr.MOT_DU_DIRECTEUR_UFR}}</textarea>
+
+<label>Présentation</label>
+<textarea name="presentation" rows="20">{{ufr.PRESENTATION_UFR}}</textarea>
+
+<button> Enregistrer </button>
+
+</form>
+
+</div>
+
+{% endblock %}

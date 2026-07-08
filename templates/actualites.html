@@ -2,6 +2,48 @@
 
 {% block content %}
 
-<h1>Actualités</h1>
+<h1 class="titre-page">
+
+Actualités
+
+</h1>
+
+<div class="actualites">
+
+{% for actu in actualites %}
+
+<div class="actualite">
+
+<img
+src="{{url_for('static',filename='images/'+actu.PHOTO_ACTU)}}"
+alt="{{actu.TITRE_ACTU}}">
+
+<div class="contenu">
+
+<h2>
+
+{{actu.TITRE_ACTU}}
+
+</h2>
+
+<p>
+
+{{actu.DATE_PUBLICATION}}
+
+</p>
+
+<p>
+
+{{actu.DESCRIPTION_ACTU}}
+
+</p>
+
+</div>
+
+</div>
+
+{% endfor %}
+
+</div>
 
 {% endblock %}

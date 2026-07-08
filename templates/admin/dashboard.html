@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="dashboard">
+
+<h1>Tableau de bord Administrateur</h1>
+
+<ul>
+
+    <li><a href="{{url_for('gerer_infoufr')}}">Informations de l'UFR</a></li>
+
+    <li><a href="{{url_for('gerer_actu')}}">Gérer les actualités</a></li>
+
+    <li><a href="{{url_for('gerer_act')}}">Gérer les activités</a></li>
+
+    <li><a href="{{url_for('gerer_formation')}}">Gérer les formations</a></li>
+
+    <li><a href="{{url_for('gerer_ens')}}">Gérer les enseignants</a></li>
+
+    <li><a href="{{url_for('gerer_galerie')}}">Gérer la galerie</a></li>
+
+    <li><a href="{{url_for('gerer_contact')}}">Messages reçus</a></li>
+
+    <li><a href="{{url_for('logout')}}">Déconnexion</a></li>
+
+</ul>
+
+{% endblock %}

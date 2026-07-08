@@ -2,6 +2,48 @@
 
 {% block content %}
 
-<h1>Notre UFR</h1>
+<section class="hero">
+
+<h1>
+
+{{ufr.NOM_UFR}}
+
+</h1>
+
+<h3>
+
+{{ufr.SIGLE_UFR}}
+
+</h3>
+
+</section>
+
+<section class="presentation">
+
+<h2>
+
+Mot du Directeur
+
+</h2>
+
+<p>
+
+{{ufr.MOT_DU_DIRECTEUR_UFR}}
+
+</p>
+
+<h2>
+
+Présentation
+
+</h2>
+
+<p>
+
+{{ufr.PRESENTATION_UFR}}
+
+</p>
+
+</section>
 
 {% endblock %}

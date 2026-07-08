@@ -15,7 +15,7 @@
                 <li><a href="{{url_for('galerie')}}" class="{% if request.endpoint == 'galerie' %}active{% endif %}">Galerie</a></li>
                 <li><a href="{{url_for('nosenseignants')}}" class="{% if request.endpoint == 'nosenseignants' %}active{% endif %}">Enseignants</a></li>
                 <li><a href="{{url_for('contact')}}" class="{% if request.endpoint == 'contact' %}active{% endif %}">Contacts</a></li>
-                <li><a href="{{url_for('departements')}}" class="{% if request.endpoint == 'departements' %}active{% endif %}">Aministration</a></li>
+                <li><a href="{{url_for('login')}}" class="{% if request.endpoint == 'departements' %}active{% endif %}">Aministration</a></li>
             </ul>
         </div>
         <img src="{{url_for('static', filename='images/search-btn.svg')}}" alt="bouton de recherche" class="search-btn">
@@ -35,9 +35,6 @@
         <img src="{{url_for('static', filename='images/menu-btn.svg')}}" alt="menu hamburger" class="menu-hamburger" >
     </nav>
 
-    <header>
-
-    </header>
     {% block content %}
     {% endblock %}
 </body>

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="admin-page">
+
+<h1>Gestion des actualités</h1>
+
+<form method="POST">
+
+<label>Titre</label>
+<input type="text" name="titre" required>
+
+<label>Description</label>
+<textarea name="description" rows="20" required> </textarea>
+
+<label>Photo de couverture</label>
+<select name="photo" required>
+
+{% for photo in photos %}
+<option value="{{photo.ID_PHOTO}}"> {{photo.NOM_PHOTO}} </option>
+{% endfor %}
+</select>
+
+<br><br>
+
+<button type="submit"> Publier </button>
+
+</form>
+
+<hr>
+
+<h2>Actualités publiées</h2>
+
+<table>
+
+<tr>
+<th>Couverture</th>
+<th>Titre</th>
+<th>Date</th>
+<th>Supprimer</th>
+</tr>
+
+{% for actu in actualites %}
+<tr>
+<td> <img src="{{ url_for('static', filename='images/' + actu.NOM_PHOTO) }}" width="120"></td>
+<td> {{actu.TITRE_ACTU}} </td>
+<td> {{actu.DATE_PUBLICATION}} </td>
+<td> <form method="POST">
+<input type="hidden" name="id_actu" value="{{actu.ID_ACTU}}">
+<button type="submit" name="supprimer"> Supprimer </button>
+</form>
+</td>
+</tr>
+
+{% endfor %}
+
+</table>
+</div>
+
+{% endblock %}
